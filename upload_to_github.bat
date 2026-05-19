@@ -5,7 +5,8 @@ echo ===================================================
 cd /d "%~dp0"
 git init
 git add .
-git commit -m "Initial commit with Room, Jetpack Compose, TTS, and GitHub Actions"
+git update-index --chmod=+x gradlew >nul 2>&1
+git commit -m "Fix gradlew permissions and upload code"
 git branch -M main
 git remote remove origin >nul 2>&1
 git remote add origin https://github.com/abdelouahab12/DeutschPalast.git
