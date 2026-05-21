@@ -8,6 +8,7 @@ import androidx.activity.viewModels
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -265,7 +266,8 @@ fun MainScreen(viewModel: MainViewModel, speak: (String) -> Unit) {
                                 colors = CardDefaults.cardColors(
                                     containerColor = Color(0x15FFFFFF) // Glassmorphism effect
                                 ),
-                                border = CardDefaults.outlinedCardBorder().copy(
+                                border = BorderStroke(
+                                    width = 1.dp,
                                     brush = Brush.linearGradient(
                                         colors = listOf(Color(0x33FFFFFF), Color(0x05FFFFFF))
                                     )
